@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import NoteItem from "./NoteItem";
 import ReactQuill from "react-quill";
@@ -38,16 +39,16 @@ const Notes = ({ videoId, player }) => {
   };
 
   return (
-    <div className="mt-4">
+    <div className="mt-4 flex justify-evenly items-center">
       <ReactQuill
         value={noteContent}
         onChange={setNoteContent}
         placeholder="Add your note here..."
-        className="mb-4"
+        className="mb-4 h-52"
       />
       <button
         onClick={addNote}
-        className="px-4 py-2 bg-blue-500 text-white rounded"
+        className="px-4 py-2 bg-blue-500 text-white rounded border"
       >
         Add Note
       </button>

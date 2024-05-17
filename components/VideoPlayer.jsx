@@ -3,18 +3,14 @@ import YouTube from "react-youtube";
 
 const VideoPlayer = ({ videoId, onReady }) => {
   const opts = {
-    height: "390",
-    width: "640",
+    height: "600",
+    width: "1000",
     playerVars: {
       autoplay: 0,
     },
   };
 
-  return (
-    <div className="flex justify-center">
-      <YouTube videoId={videoId} opts={opts} onReady={onReady} />
-    </div>
-  );
+  return <YouTube videoId={videoId} opts={opts} onReady={onReady} />;
 };
 
 export default VideoPlayer;
